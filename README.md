@@ -1,2 +1,2 @@
-# logrus_sentry
+# sentryhook
 sentryhook
