@@ -1,7 +1,6 @@
 package sentryhook
 
 import (
-	"fmt"
 	"sync"
 	"time"
 
@@ -112,7 +111,6 @@ func NewAsyncSentryHook(DSN string) (*SentryHook, error) {
 // Fire writes the log file to defined path or using the defined writer.
 // User who run this function needs write permissions to the file or directory if the file does not yet exist.
 func (hook *SentryHook) Fire(entry *logrus.Entry) error {
-	fmt.Printf("start entry:%+v", entry)
 	// We may be crashing the program, so should flush any buffered events.
 	content := hook.createContent(entry)
 
